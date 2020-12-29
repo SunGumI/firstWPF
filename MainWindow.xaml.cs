@@ -42,8 +42,8 @@ namespace firstWPF
         {
             string s = (string)((Button)e.OriginalSource).Content;
             textBlock.Text += s;
-            int num;
-            bool result = Int32.TryParse(s, out num);
+            decimal num;
+            bool result = Decimal.TryParse(s, out num);
 
             if (result)
             {
@@ -89,8 +89,8 @@ namespace firstWPF
 
         private void Updade_RightOp()
         {
-            int num1 = Int32.Parse(leftop);
-            int num2 = Int32.Parse(rightop);
+            decimal num1 = Decimal.Parse(leftop);
+            decimal num2 = Decimal.Parse(rightop);
             switch (operation)
             {
                 case "+":
